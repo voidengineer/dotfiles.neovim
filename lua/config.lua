@@ -29,6 +29,9 @@ vim.g.nvc = {
     sql = {
       enabled = true,
     },
+    typescript = {
+      enabled = true,
+    },
     web = {
       enabled = true,
     },

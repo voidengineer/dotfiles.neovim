@@ -7,6 +7,7 @@ return {
   { import = "plugins.lang.markdown", enabled = vim.g.nvc.lang.markdown.enabled },
   { import = "plugins.lang.rust", enabled = vim.g.nvc.lang.rust.enabled },
   { import = "plugins.lang.sql", enabled = vim.g.nvc.lang.sql.enabled },
+  { import = "plugins.lang.typescript", enabled = vim.g.nvc.lang.typescript.enabled },
   { import = "plugins.lang.web", enabled = vim.g.nvc.lang.web.enabled },
   { import = "plugins.lang.yaml", enabled = vim.g.nvc.lang.yaml.enabled },
 }
