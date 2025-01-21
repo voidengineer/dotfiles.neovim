@@ -46,6 +46,11 @@ return {
       })
 
       return {
+        window = {
+          mappings = {
+            ["<space>"] = false,
+          },
+        },
         event_handlers = {
           {
             event = "file_open_requested",
