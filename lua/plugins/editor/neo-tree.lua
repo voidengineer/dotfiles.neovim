@@ -2,6 +2,7 @@ return {
   { -- file explorer (and more)
     "nvim-neo-tree/neo-tree.nvim",
     version = "3.*",
+    lazy = false,
     cmd = "Neotree",
     keys = {
       {
