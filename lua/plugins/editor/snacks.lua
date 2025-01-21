@@ -70,6 +70,13 @@ return {
         desc = "Toogle Zoom",
       },
       {
+        "<leader>_",
+        function()
+          Snacks.terminal()
+        end,
+        desc = "Terminal",
+      },
+      {
         "]]",
         function()
           Snacks.words.jump(vim.v.count1)
