@@ -9,8 +9,7 @@ return {
     opts = {
       keymap = {
         preset = "enter",
-        ["<esc>"] = { "cancel", "fallback" },
-
+        ["<C-c>"] = { "cancel", "fallback" },
         cmdline = {
           preset = "super-tab",
         },
