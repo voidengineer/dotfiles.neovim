@@ -6,6 +6,7 @@ g.loaded_netrwPlugin = 1
 local o = vim.opt
 
 o.termguicolors = true
+o.laststatus = 3
 
 o.nu = true
 o.relativenumber = true
