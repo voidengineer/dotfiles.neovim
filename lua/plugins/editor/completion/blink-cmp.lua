@@ -10,7 +10,9 @@ return {
       keymap = {
         preset = "enter",
         ["<C-c>"] = { "cancel", "fallback" },
-        cmdline = {
+      },
+      cmdline = {
+        keymap = {
           preset = "super-tab",
         },
       },
