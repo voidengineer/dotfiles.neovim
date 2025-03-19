@@ -29,7 +29,7 @@ return {
   },
   {
     "MeanderingProgrammer/render-markdown.nvim",
-    version = "7.*",
+    version = "8.*",
     ft = "markdown",
     init = function()
       vim.api.nvim_create_autocmd("FileType", {
