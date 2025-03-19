@@ -11,11 +11,6 @@ return {
         preset = "enter",
         ["<C-c>"] = { "cancel", "fallback" },
       },
-      cmdline = {
-        keymap = {
-          preset = "super-tab",
-        },
-      },
       completion = {
         list = {
           selection = {
@@ -37,6 +32,19 @@ return {
               { "source_name" },
             },
             treesitter = { "lsp" },
+          },
+        },
+      },
+      cmdline = {
+        keymap = {
+          preset = "super-tab",
+        },
+        completion = {
+          ghost_text = {
+            enabled = true,
+          },
+          menu = {
+            auto_show = true,
           },
         },
       },
