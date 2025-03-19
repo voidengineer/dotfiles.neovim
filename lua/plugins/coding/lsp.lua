@@ -19,6 +19,9 @@ return {
     config = function()
       -- noop / required to avoid lazy.nvim calling non-existent #setup()
     end,
+    opts = function()
+      require("lspconfig").harper_ls.setup({})
+    end,
     dependencies = {
       "williamboman/mason-lspconfig.nvim",
     },
