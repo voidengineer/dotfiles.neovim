@@ -17,6 +17,7 @@ return {
   { import = "plugins.editor.lualine" },
   { import = "plugins.editor.treesitter" },
   { import = "plugins.editor.completion" },
+  { import = "plugins.editor.b64" },
   { import = "plugins.editor.persistence" },
   { import = "plugins.editor.catppuccin" },
   { import = "plugins.editor.nvim_tmux_navigation" },
