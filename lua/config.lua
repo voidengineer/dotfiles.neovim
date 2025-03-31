@@ -3,6 +3,9 @@ vim.g.nvc = {
     smear_cursor = {
       enabled = true,
     },
+    harper_ls = {
+      enabled = true,
+    },
   },
   lang = {
     ansible = {

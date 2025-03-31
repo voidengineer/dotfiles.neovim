@@ -20,7 +20,9 @@ return {
       -- noop / required to avoid lazy.nvim calling non-existent #setup()
     end,
     opts = function()
-      require("lspconfig").harper_ls.setup({})
+      if vim.g.nvc.editor.harper_ls.enabled then
+        require("lspconfig").harper_ls.setup({})
+      end
     end,
     dependencies = {
       "williamboman/mason-lspconfig.nvim",
