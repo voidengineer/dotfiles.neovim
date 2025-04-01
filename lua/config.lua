@@ -3,6 +3,9 @@ vim.g.nvc = {
     smear_cursor = {
       enabled = true,
     },
+    neotree = {
+      close_on_file_open = true,
+    },
     harper_ls = {
       enabled = true,
     },

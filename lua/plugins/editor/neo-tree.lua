@@ -55,7 +55,9 @@ return {
           {
             event = "file_open_requested",
             handler = function()
-              require("neo-tree.command").execute({ action = "close" })
+              if vim.g.nvc.editor.neotree.close_on_file_open then
+                require("neo-tree.command").execute({ action = "close" })
+              end
             end,
           },
         },
