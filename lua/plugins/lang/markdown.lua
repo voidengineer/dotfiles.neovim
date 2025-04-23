@@ -31,6 +31,13 @@ return {
     "MeanderingProgrammer/render-markdown.nvim",
     version = "8.*",
     ft = "markdown",
+    opts = {
+      completions = {
+        blink = {
+          enabled = true,
+        },
+      },
+    },
     init = function()
       vim.api.nvim_create_autocmd("FileType", {
         pattern = { "markdown" },
@@ -44,6 +51,7 @@ return {
     dependencies = {
       "nvim-treesitter/nvim-treesitter",
       "nvim-tree/nvim-web-devicons",
+      "saghen/blink.cmp",
     },
   },
 }
