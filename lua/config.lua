@@ -5,6 +5,7 @@ vim.g.nvc = {
     },
     neotree = {
       close_on_file_open = true,
+      filsystem = {},
     },
     harper_ls = {
       enabled = true,

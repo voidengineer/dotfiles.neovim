@@ -51,6 +51,7 @@ return {
             ["<space>"] = false,
           },
         },
+        filesystem = vim.g.nvc.editor.neotree.filesystem,
         event_handlers = {
           {
             event = "file_open_requested",
