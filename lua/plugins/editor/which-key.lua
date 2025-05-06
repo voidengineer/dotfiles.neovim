@@ -27,6 +27,7 @@ return {
           { "<leader>p", group = "Project Navigation" },
           { "<leader>x", group = "Trouble" },
           { "<leader>g", group = "Git" },
+          { "<leader>a", group = "AI" },
           { "<leader>n", group = "Notifications" },
           { "<leader>q", group = "Session Management" },
         },

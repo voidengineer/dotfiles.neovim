@@ -51,6 +51,15 @@ vim.g.nvc = {
       enabled = true,
     },
   },
+  ai = {
+    enabled = true,
+    mcphub = {
+      enabled = true,
+    },
+    codecompanion = {
+      enabled = true,
+    },
+  },
 }
 
 local config = io.open(os.getenv("HOME") .. "/.nvc.json", "r")

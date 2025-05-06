@@ -30,7 +30,7 @@ return {
   {
     "MeanderingProgrammer/render-markdown.nvim",
     version = "8.*",
-    ft = "markdown",
+    ft = { "markdown", "codecompanion" },
     opts = {
       completions = {
         blink = {
