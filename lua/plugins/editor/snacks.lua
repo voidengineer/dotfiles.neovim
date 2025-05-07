@@ -140,6 +140,13 @@ return {
         desc = "Terminal",
       },
       {
+        "<C-u>",
+        function()
+          Snacks.picker.undo()
+        end,
+        desc = "Show Undo History",
+      },
+      {
         "]]",
         function()
           Snacks.words.jump(vim.v.count1)

@@ -9,7 +9,6 @@ return {
   { import = "plugins.editor.neo-tree" },
   { import = "plugins.editor.todo-comments" },
   { import = "plugins.editor.flash" },
-  { import = "plugins.editor.undotree" },
   { import = "plugins.editor.gitsigns" },
   { import = "plugins.editor.bufferline" },
   { import = "plugins.editor.lualine" },
