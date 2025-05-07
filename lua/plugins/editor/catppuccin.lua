@@ -15,9 +15,6 @@ return {
         which_key = true,
         snacks = true,
         fidget = true,
-        telescope = {
-          enabled = true,
-        },
         neotree = true,
         lsp_trouble = true,
         flash = true,

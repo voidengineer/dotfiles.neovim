@@ -2,7 +2,7 @@ return {
   { -- navigating and searching TODOs
     "folke/todo-comments.nvim",
     version = "1.*",
-    cmd = { "TodoTrouble", "TodoTelescope" },
+    cmd = { "TodoTrouble" },
     keys = {
       {
         "]T",
@@ -22,19 +22,6 @@ return {
     event = { "BufReadPre", "BufNewFile" },
     dependencies = {
       "nvim-lua/plenary.nvim",
-    },
-  },
-  { -- integrate todo-comments with telescope.nvim
-    "todo-comments.nvim",
-    optional = true,
-    keys = {
-      { "<leader>pt", "<cmd>TodoTelescope<cr>", desc = "TODOs" },
-    },
-    opts = function()
-      require("telescope").load_extension("todo-comments")
-    end,
-    dependencies = {
-      "nvim-telescope/telescope.nvim",
     },
   },
   { -- integrate todo-comments with trouble.nvim

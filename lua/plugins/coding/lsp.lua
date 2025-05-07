@@ -28,28 +28,28 @@ return {
       "williamboman/mason-lspconfig.nvim",
     },
   },
-  -- TODO: Setup LSP keymaps for Telescope
+  -- TODO: Setup LSP keymaps for Snacks
   {
-    "telescope.nvim",
+    "snacks.nvim",
     keys = {
       {
         "gd",
         function()
-          require("telescope.builtin").lsp_definitions()
+          Snacks.picker.lsp_definitions()
         end,
         desc = "Definitions",
       },
       {
         "gr",
         function()
-          require("telescope.builtin").lsp_references()
+          Snacks.picker.lsp_references()
         end,
         desc = "References",
       },
       {
         "gi",
         function()
-          require("telescope.builtin").lsp_implementations()
+          Snacks.picker.lsp_implementations()
         end,
         desc = "Implementations",
       },

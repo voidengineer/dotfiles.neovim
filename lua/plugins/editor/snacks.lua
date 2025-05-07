@@ -6,6 +6,41 @@ return {
     lazy = false,
     keys = {
       {
+        "<leader><space>",
+        function()
+          Snacks.picker.smart()
+        end,
+        desc = "Smart Find Files",
+      },
+      {
+        "<leader>pf",
+        function()
+          Snacks.picker.files()
+        end,
+        desc = "Find Files",
+      },
+      {
+        "<leader>ps",
+        function()
+          Snacks.picker.grep()
+        end,
+        desc = "Search (Grep) for Files",
+      },
+      {
+        "<leader>pr",
+        function()
+          Snacks.picker.registers()
+        end,
+        desc = "Registers",
+      },
+      {
+        "<leader>bs",
+        function()
+          Snacks.picker.buffers({ current = false })
+        end,
+        desc = "Switch Buffer",
+      },
+      {
         "<leader>gg",
         function()
           Snacks.lazygit()
@@ -40,6 +75,13 @@ return {
           Snacks.git.blame_line()
         end,
         desc = "Blame Line",
+      },
+      {
+        "<leader>gs",
+        function()
+          Snacks.picker.git_files()
+        end,
+        desc = "Find Files",
       },
       {
         "<leader>nh",
@@ -97,6 +139,9 @@ return {
       dashboard = {
         enabled = true,
         example = "advanced",
+      },
+      picker = {
+        layout = "ivy",
       },
       statuscolumn = { enabled = true },
       notifier = { enabled = true },
