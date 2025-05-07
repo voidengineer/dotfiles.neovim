@@ -162,6 +162,20 @@ return {
         desc = "Prev Reference",
         mode = { "n", "t" },
       },
+      {
+        "<leader>::",
+        function()
+          Snacks.picker.commands()
+        end,
+        desc = "Commands",
+      },
+      {
+        "<leader>:l",
+        function()
+          Snacks.picker.command_history()
+        end,
+        desc = "Command Log",
+      },
     },
     opts = {
       dashboard = {
