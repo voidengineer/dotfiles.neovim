@@ -7,7 +7,6 @@ return {
   { import = "plugins.editor.snacks" },
   { import = "plugins.editor.fidget" },
   { import = "plugins.editor.neo-tree" },
-  { import = "plugins.editor.trouble" },
   { import = "plugins.editor.todo-comments" },
   { import = "plugins.editor.flash" },
   { import = "plugins.editor.undotree" },

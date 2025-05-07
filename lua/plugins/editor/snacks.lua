@@ -84,6 +84,27 @@ return {
         desc = "Find Files",
       },
       {
+        "<leader>xd",
+        function()
+          Snacks.picker.diagnostics()
+        end,
+        desc = "Diagnostics",
+      },
+      {
+        "<leader>xD",
+        function()
+          Snacks.picker.diagnostics_buffer()
+        end,
+        desc = "Diagnostics",
+      },
+      {
+        "<leader>xq",
+        function()
+          Snacks.picker.qflist()
+        end,
+        desc = "Quick Fix List",
+      },
+      {
         "<leader>nh",
         function()
           Snacks.notifier.hide()
