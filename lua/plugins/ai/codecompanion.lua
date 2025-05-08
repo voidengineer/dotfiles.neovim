@@ -7,11 +7,6 @@ return {
       { "<leader>ac", "<cmd>CodeCompanionChat<cr>", desc = "Code Companion Chat" },
       { "<leader>aa", "<cmd>CodeCompanionActions<cr>", desc = "Code Companion Actions" },
     },
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-treesitter/nvim-treesitter",
-      "ravitemer/mcphub.nvim",
-    },
     opts = {
       display = {
         chat = {
@@ -53,6 +48,11 @@ return {
           },
         },
       },
+    },
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+      "ravitemer/mcphub.nvim",
     },
   },
 }
