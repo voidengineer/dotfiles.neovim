@@ -1,7 +1,7 @@
 return {
   {
-    "williamboman/mason.nvim",
-    version = "1.*",
+    "mason-org/mason.nvim",
+    version = "2.*",
     event = "VeryLazy",
     opts = {},
   },

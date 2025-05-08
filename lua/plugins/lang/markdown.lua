@@ -6,10 +6,10 @@ return {
     },
   },
   {
-    "nvim-lspconfig",
-    opts = function()
-      require("lspconfig").marksman.setup({})
-    end,
+    "mason-lspconfig.nvim",
+    opts = {
+      ensure_installed = { "marksman" },
+    },
   },
   {
     "conform.nvim",
@@ -40,7 +40,7 @@ return {
     },
     init = function()
       vim.api.nvim_create_autocmd("FileType", {
-        pattern = { "markdown" },
+        pattern = { "markdown", "codecompanion" },
         callback = function()
           vim.keymap.set("n", "<leader>eP", function()
             require("render-markdown").toggle()

@@ -6,12 +6,10 @@ return {
     },
   },
   {
-    "nvim-lspconfig",
-    opts = function()
-      local lspconfig = require("lspconfig")
-      lspconfig.dockerls.setup({})
-      lspconfig.docker_compose_language_service.setup({})
-    end,
+    "mason-lspconfig.nvim",
+    opts = {
+      ensure_installed = { "dockerls", "docker_compose_language_service" },
+    },
   },
   {
     "nvim-lint",

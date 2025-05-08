@@ -6,9 +6,15 @@ return {
     },
   },
   {
+    "mason-lspconfig.nvim",
+    opts = {
+      ensure_installed = { "yamlls" },
+    },
+  },
+  {
     "nvim-lspconfig",
     opts = function()
-      require("lspconfig").yamlls.setup({
+      vim.lsp.config["yamlls"] = {
         capabilities = {
           textDocument = {
             foldingRange = {
@@ -26,11 +32,10 @@ return {
             schemas = require("schemastore").yaml.schemas(),
           },
         },
-      })
+      }
     end,
     dependencies = {
-      "b0o/schemastore.nvim",
-      version = false,
+      { "b0o/schemastore.nvim", version = false },
     },
   },
   {
@@ -38,6 +43,14 @@ return {
     opts = {
       formatters_by_ft = {
         yaml = { "yamlfmt" },
+      },
+    },
+  },
+  {
+    "nvim-lint",
+    opts = {
+      linters_by_ft = {
+        yaml = { "yamllint" },
       },
     },
   },

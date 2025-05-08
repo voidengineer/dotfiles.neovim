@@ -6,19 +6,25 @@ return {
     },
   },
   {
-    "nvim-lspconfig",
-    opts = function()
-      local lspconfig = require("lspconfig")
-      lspconfig.html.setup({})
-      lspconfig.cssls.setup({})
-    end,
+    "mason-lspconfig.nvim",
+    opts = {
+      ensure_installed = { "html", "cssls" },
+    },
   },
   {
     "conform.nvim",
     opts = {
       formatters_by_ft = {
-        css = { "prettier" },
-        html = { "prettier" },
+        css = { "prettierd", "prettier", stop_after_first = true },
+        html = { "prettierd", "prettier", stop_after_first = true },
+      },
+    },
+  },
+  {
+    "nvim-lint",
+    opts = {
+      linters_by_ft = {
+        htlm = { "htmlhint" },
       },
     },
   },

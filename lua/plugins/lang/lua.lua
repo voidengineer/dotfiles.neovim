@@ -12,12 +12,6 @@ return {
     },
   },
   {
-    "nvim-lspconfig",
-    opts = function()
-      require("lspconfig").lua_ls.setup({})
-    end,
-  },
-  {
     "conform.nvim",
     opts = {
       formatters_by_ft = {

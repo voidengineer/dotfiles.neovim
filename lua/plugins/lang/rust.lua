@@ -6,10 +6,10 @@ return {
     },
   },
   {
-    "nvim-lspconfig",
-    opts = function()
-      require("lspconfig").rust_analyzer.setup({})
-    end,
+    "mason-lspconfig.nvim",
+    opts = {
+      ensure_installed = { "rust_analyzer" },
+    },
   },
   {
     "mrcjkb/rustaceanvim",

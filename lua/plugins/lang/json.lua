@@ -6,9 +6,15 @@ return {
     },
   },
   {
+    "mason-lspconfig.nvim",
+    opts = {
+      ensure_installed = { "jsonls" },
+    },
+  },
+  {
     "nvim-lspconfig",
     opts = function()
-      require("lspconfig").jsonls.setup({
+      vim.lsp.config["jsonls"] = {
         settings = {
           json = {
             schemas = require("schemastore").json.schemas(),
@@ -20,11 +26,10 @@ return {
             },
           },
         },
-      })
+      }
     end,
     dependencies = {
-      "b0o/schemastore.nvim",
-      version = false,
+      { "b0o/schemastore.nvim", version = false },
     },
   },
 }

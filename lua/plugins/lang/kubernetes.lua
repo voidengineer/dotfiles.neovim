@@ -6,9 +6,9 @@ return {
     },
   },
   {
-    "nvim-lspconfig",
-    opts = function()
-      require("lspconfig").helm_ls.setup({})
-    end,
+    "mason-lspconfig.nvim",
+    opts = {
+      ensure_installed = { "helm_ls" },
+    },
   },
 }

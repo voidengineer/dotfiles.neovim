@@ -6,17 +6,17 @@ return {
     },
   },
   {
-    "nvim-lspconfig",
-    opts = function()
-      require("lspconfig").ts_ls.setup({})
-    end,
+    "mason-lspconfig.nvim",
+    opts = {
+      ensure_installed = { "ts_ls" },
+    },
   },
   {
     "conform.nvim",
     opts = {
       formatters_by_ft = {
-        javascript = { "prettierd" },
-        typescript = { "prettierd" },
+        javascript = { "prettierd", "prettier", stop_after_first = true },
+        typescript = { "prettierd", "prettier", stop_after_first = true },
       },
     },
   },

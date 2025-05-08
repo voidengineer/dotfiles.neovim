@@ -1,12 +1,11 @@
 return {
   {
-    "williamboman/mason-lspconfig.nvim",
-    version = false,
+    "mason-org/mason-lspconfig.nvim",
+    version = "2.*",
     cmd = { "LspInstall", "LspUninstall" },
     opts_extend = { "ensure_installed" },
     opts = {
-      automatic_installation = true,
-      ensure_installed = {},
+      ensure_installed = { "harper_ls" },
     },
     dependencies = {
       "williamboman/mason.nvim",
@@ -14,24 +13,39 @@ return {
   },
   {
     "neovim/nvim-lspconfig",
-    version = "1.*",
+    version = "2.*",
     event = { "BufReadPre", "BufNewFile" },
     config = function()
       -- noop / required to avoid lazy.nvim calling non-existent #setup()
-    end,
-    opts = function()
-      if vim.g.nvc.editor.harper_ls.enabled then
-        require("lspconfig").harper_ls.setup({})
-      end
     end,
     dependencies = {
       "williamboman/mason-lspconfig.nvim",
     },
   },
-  -- TODO: Setup LSP keymaps for Snacks
   {
     "snacks.nvim",
     keys = {
+      {
+        "<leader>lc",
+        function()
+          Snacks.picker.lsp_config()
+        end,
+        desc = "LSP Config",
+      },
+      {
+        "<leader>ls",
+        function()
+          Snacks.picker.lsp_symbols()
+        end,
+        desc = "Document Symbols",
+      },
+      {
+        "gR",
+        function()
+          Snacks.picker.lsp_references()
+        end,
+        desc = "References",
+      },
       {
         "gd",
         function()
@@ -40,11 +54,11 @@ return {
         desc = "Definitions",
       },
       {
-        "gr",
+        "gD",
         function()
-          Snacks.picker.lsp_references()
+          Snacks.picker.lsp_declarations()
         end,
-        desc = "References",
+        desc = "Declarations",
       },
       {
         "gi",
@@ -53,15 +67,20 @@ return {
         end,
         desc = "Implementations",
       },
-    },
-  },
-  -- TODO: Setup LSP keymaps for Trouble
-  {
-    "trouble.nvim",
-    keys = {
-      { "<leader>ld", "<cmd>Trouble lsp_definitions open<cr>", desc = "Definitions" },
-      { "<leader>lr", "<cmd>Trouble lsp_references open<cr>", desc = "References" },
-      { "<leader>li", "<cmd>Trouble lsp_implementations open<cr>", desc = "Implementations" },
+      {
+        "gt",
+        function()
+          Snacks.picker.lsp_type_definitions()
+        end,
+        desc = "Type Definitions",
+      },
+      {
+        "<leader>lS",
+        function()
+          Snacks.picker.lsp_workspace_symbols()
+        end,
+        desc = "Workspace Symbols",
+      },
     },
   },
 }
