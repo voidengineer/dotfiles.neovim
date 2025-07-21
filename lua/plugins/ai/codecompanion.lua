@@ -1,7 +1,7 @@
 return {
   {
     "olimorris/codecompanion.nvim",
-    version = "15.*",
+    version = "17.*",
     cmd = { "CodeCompanion", "CodeCompanionActions", "CodeCompanionChat", "CodeCompanionCmd" },
     keys = {
       { "<leader>ac", "<cmd>CodeCompanionChat<cr>", desc = "Code Companion Chat" },

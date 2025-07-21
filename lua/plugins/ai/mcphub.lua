@@ -1,7 +1,7 @@
 return {
   {
     "ravitemer/mcphub.nvim",
-    version = "5.*",
+    version = "6.*",
     build = "npm install -g mcp-hub@latest",
     cmd = { "MCPHub" },
     opts = {},
